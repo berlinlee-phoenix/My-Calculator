@@ -7,9 +7,6 @@
 ![Render SaaS](https://i.ytimg.com/vi/5k8wVxX-IGM/maxresdefault.jpg)
 ##
 ## A calculator built with JSX, CSS, React.js
-##
-## 
-##
 ### Getting Started with Create React App
 ##
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
