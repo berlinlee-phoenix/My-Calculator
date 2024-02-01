@@ -217,58 +217,93 @@ class App extends Component {
       // Allow only 1 "." on Screen
       if (this.state.input.includes('.') || display.textContent.includes('.')) {
         dotButton.disabled = true;
+        //dotButton.style.visibility = 'hidden';
       }
       else if (this.state.result !== '' && this.state.input === '') {
         dotButton.disabled = true;
+        //dotButton.style.visibility = 'visible';
       }
       else {
         dotButton.disabled = false;
+        //dotButton.style.visibilty = 'visible';
       }
 
       if (this.state.nextOperation !== '') {
         divideButton.disabled = true;
+        divideButton.style.visibility = 'hidden';
         multiplyButton.disabled = true;
+        multiplyButton.style.visibility = 'hidden';
         minusButton.disabled = true;
+        minusButton.style.visibility = 'hidden';
         plusButton.disabled = true;
+        plusButton.style.visibility = 'hidden';
       } else if (this.state.nextOperation === '') {
         divideButton.disabled = false;
+        divideButton.style.visibility = 'visible';
         multiplyButton.disabled = false;
+        multiplyButton.style.visibility = 'visible';
         minusButton.disabled = false;
+        minusButton.style.visibility = 'visible';
         plusButton.disabled = false;
+        plusButton.style.visibility = 'visible';
       }
 
       // Lock Button Pad if no nextOperation is specified
       if (this.state.result !== '' && this.state.input === '' && this.state.nextOperation === '') {
         seven.disabled = true
+        seven.style.visibility = 'hidden';
         eight.disabled = true
+        eight.style.visibility = 'hidden';
         nine.disabled = true
+        nine.style.visibility = 'hidden';
         four.disabled = true
+        four.style.visibility = 'hidden';
         five.disabled = true
+        five.style.visibility = 'hidden';
         six.disabled = true
+        six.style.visibility = 'hidden';
         one.disabled = true
+        one.style.visibility = 'hidden';
         two.disabled = true
+        two.style.visibility = 'hidden';
         three.disabled = true
+        three.style.visibility = 'hidden';
         zero.disabled = true
+        zero.style.visibility = 'hidden';
         equalButton.disabled = true
+        equalButton.style.visibility = 'hidden';
       } else {
         seven.disabled = false
+        seven.style.visibility = 'visible';
         eight.disabled = false
+        eight.style.visibility = 'visible';
         nine.disabled = false
+        nine.style.visibility = 'visible';
         four.disabled = false
+        four.style.visibility = 'visible';
         five.disabled = false
+        five.style.visibility = 'visible';
         six.disabled = false
+        six.style.visibility = 'visible';
         one.disabled = false
+        one.style.visibility = 'visible';
         two.disabled = false
+        two.style.visibility = 'visible';
         three.disabled = false
+        three.style.visibility = 'visible';
         zero.disabled = false
+        zero.style.visibility = 'visible';
         equalButton.disabled = false
+        equalButton.style.visibility = 'visible';
       }
 
       // Lock equalButton if there's this.state.nextOperation + !this.state.input + this.state.result
       if (this.state.nextOperation && !this.state.input && this.state.result) {
         equalButton.disabled = true
+        equalButton.style.visibility = 'hidden';
       } else {
         equalButton.disabled = false
+        equalButton.style.visibility = 'visible';
       }
   }
 
